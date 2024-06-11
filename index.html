@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Reserva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h4>Reserva Hotel</h4>
+        <form id="reservaForm">
+            <div class="form-group">
+                <label for="fechaIngreso">Fecha de Ingreso:</label>
+                <input type="date" id="fechaIngreso" name="fechaIngreso" required>
+            </div>
+            <div class="form-group">
+                <label for="fechaEgreso">Fecha de Egreso:</label>
+                <input type="date" id="fechaEgreso" name="fechaEgreso" required>
+            </div>
+            <div class="form-group">
+                <label for="camas">Camas:</label>
+                <select id="camas" name="camas" required>
+                    <option value="1">Cama matrimonial</option>
+                    <option value="2">Cama individual</option>
+                    <option value="3">Cama king size</option>
+                    <option value="4">Cama dos plazas</option>
+                </select>
+            </div>
+            <div class="form-group radio-group">
+                <label>
+                    <input type="radio" name="opcion" value="opcion1" required> Fumador
+                </label>
+                <label>
+                    <input type="radio" name="opcion" value="opcion2" required> No Fumador
+                </label>
+            </div>
+            <div class="form-group">
+                <div class="checkbox-group">
+                    <label>Comodidades:</label>
+                    <label>
+                        <input type="checkbox" name="comodidades" value="wifi"> Vista al oseano
+                    </label>
+                    <label>
+                        <input type="checkbox" name="comodidades" value="desayuno"> Almuerzo
+                    </label>
+                    <label>
+                        <input type="checkbox" name="comodidades" value="parking"> Mini Bar
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tipoTarjeta">Modo de Pago:</label>
+                <select id="tipoTarjeta" name="tipoTarjeta" required>
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">MasterCard</option>
+                    <option value="amex">American Express</option>
+                    <option value="discover">Discover</option>
+                    <option value="diners">Diners Club</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="numeroTarjeta">Número de Tarjeta:</label>
+                <input type="text" id="numeroTarjeta" name="numeroTarjeta" required>
+            </div>
+            <div class="form-group">
+                <label for="expiracionMes">Fecha de Expiración:</label>
+                <select id="expiracionMes" name="expiracionMes" required></select>
+                <br>
+                <br>
+                <select id="expiracionAno" name="expiracionAno" required></select>
+            </div>
+            <div class="buttons">
+                <button type="submit" >Enviar</button>
+                <button type="button" onclick="cancelar()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <script src="javas.js"></script>
+</body>
+</html>
